@@ -351,11 +351,5 @@
       "android": "hustle-android",
       "backend": "hustle-backend"
     }
-  },
-  "center": {
-    "name": "Center",
-    "repos": {
-      "ios": "center-ios"
-    }
   }
 }

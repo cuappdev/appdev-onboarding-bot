@@ -1,2 +1,4 @@
 .env
 __pycache__/
+summaries_cache.json
+repo_cache.json
