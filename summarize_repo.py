@@ -21,7 +21,19 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("models/gemini-2.5-flash")
 
-FIGMA_LINK = "https://www.figma.com/files/team/642125268638133075/all-projects?fuid=1419832257768926711"
+FIGMA_LINKS = {
+    "default": "https://www.figma.com/files/team/642125268638133075/all-projects?fuid=1419832257768926711",
+    "resell": "https://www.figma.com/files/project/37676604",
+    "eatery": "https://www.figma.com/files/project/1266190",
+    "uplift": "https://www.figma.com/files/project/1266195",
+    "coursegrab": "https://www.figma.com/files/project/4927971",
+    "score": "https://www.figma.com/files/project/268676341",
+    "volume": "https://www.figma.com/files/project/14086692",
+    "scooped": "https://www.figma.com/files/project/48332870",
+    "hustle": "https://www.figma.com/files/project/449770233",
+    "navi": "https://www.figma.com/files/project/1266194",
+    "all-in": "https://www.figma.com/files/project/292262251"
+}
 
 def clean_markdown_artifacts(text: str) -> str:
     """Clean up markdown formatting for Slack compatibility and improve readability."""
@@ -50,6 +62,7 @@ def clean_markdown_artifacts(text: str) -> str:
     return text.strip()
 
 def summarize_repo(repo_name: str, role: str, experience: str = "beginner") -> str:
+    figma_link = FIGMA_LINKS.get(repo_name.lower().split("-")[0], FIGMA_LINKS["default"])
     cache = load_cache()
     cache_key = f"{repo_name}-{role}-{experience}"
     if cache_key in cache:
@@ -128,7 +141,7 @@ IMPORTANT FORMATTING RULES:
 [What they'll typically work on]
 
 *🔗 Design Resources*
-Figma: {FIGMA_LINK}
+Figma: {figma_link}
 
 *👥 Getting Started*
 • [Any setup or access they need]
