@@ -1,37 +1,21 @@
 from github import Github
 import os
 from dotenv import load_dotenv
-import json
 
 load_dotenv()
+
 g = Github(os.getenv("GITHUB_TOKEN"))
 
 def fetch_readme(repo_name: str) -> str:
-    repo = g.get_repo(repo_name)
+    """
+    Fetches the README.md content from a Cornell AppDev repo.
+    Example: fetch_readme("resell-backend")
+    """
     try:
-        readme = repo.get_readme()
-        return readme.decoded_content.decode("utf-8")
-    except Exception:
-        return "README not found for this repository."
-
-def build_apps_json():
-    """Automatically builds a dictionary of all AppDev repos grouped by app and subteam."""
-    org = g.get_organization("cuappdev")
-    repos = org.get_repos()
-    apps = {}
-
-    for repo in repos:
-        name = repo.name.lower()
-        # only process repos with dash, like resell-backend
-        if "-" in name:
-            app_name, subteam = name.split("-", 1)
-            if app_name not in apps:
-                apps[app_name] = {"name": app_name.capitalize(), "repos": {}}
-            apps[app_name]["repos"][subteam] = name
-    return apps
-
-def cache_apps_to_file(path="apps.json"):
-    apps = build_apps_json()
-    with open(path, "w") as f:
-        json.dump(apps, f, indent=2)
-    print(f"✅ Cached {len(apps)} apps to {path}")
+        repo_full_name = f"cuappdev/{repo_name}"
+        repo = g.get_repo(repo_full_name)
+        readme_file = repo.get_readme()
+        return readme_file.decoded_content.decode("utf-8")
+    except Exception as e:
+        print(f"❌ Error fetching README for {repo_name}: {e}")
+        return "No README found or could not fetch repository."

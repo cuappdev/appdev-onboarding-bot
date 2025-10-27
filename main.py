@@ -1,8 +1,8 @@
 from slack_bolt import App
 from fastapi import FastAPI, Request
 from slack_bolt.adapter.fastapi import SlackRequestHandler
-from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
+from summarize_repo import summarize_repo
 import os
 
 # --- Load environment variables ---
@@ -26,6 +26,7 @@ allowed_apps = [
 user_states = {}
 
 # --- Slack event handlers ---
+
 @app.event("app_mention")
 def handle_app_mention(body, say):
     say("👋 Hi there! To get started, just type `onboard me`.")
@@ -59,12 +60,26 @@ def handle_message_events(event, say):
         team = state["team"]
         say(f"Got it! You’re onboarding to *{app_name} ({team})*! 🚀")
         say(f"Fetching setup info for {app_name} {team} team...")
+
+        repo_name = f"{app_name}-{team}".lower()
+
+        try:
+            summary = summarize_repo(repo_name, team)
+            if summary:
+                say(summary)
+            else:
+                say(f"⚠️ Couldn't summarize `{repo_name}` — the README might be missing or empty.")
+        except Exception as e:
+            say(f"⚠️ Error fetching setup info for `{repo_name}`.")
+            print(f"Error: {e}")
+
         state["step"] = "done"
         user_states[user_id] = state
         return
     if state["step"] == "done":
         say("🎉 You're all set! Type `onboard me` anytime to restart.")
         return
+
 
 # --- FastAPI endpoint for Slack events ---
 @api.post("/slack/events")
