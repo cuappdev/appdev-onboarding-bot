@@ -1,0 +1,26 @@
+{
+  "resell": {
+    "name": "Resell",
+    "repos": {
+      "backend": "resell-backend",
+      "ios": "resell-ios",
+      "android": "resell-android"
+    }
+  },
+  "uplift": {
+    "name": "Uplift",
+    "repos": {
+      "android": "uplift-android",
+      "ios": "uplift-ios",
+      "backend": "uplift-backend"
+    }
+  },
+  "eatery": {
+    "name": "Eatery",
+    "repos": {
+      "android": "eatery-android",
+      "ios": "eatery-ios",
+      "backend": "eatery-backend"
+    }
+  }
+}
