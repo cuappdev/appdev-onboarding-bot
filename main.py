@@ -17,7 +17,7 @@ def handle_message_events(body, say):
     user = body["event"].get("user")
     text = body["event"].get("text")
     print(f"💬 Message from {user}: {text}")
-    say(f"Hey <@{user}>! 👋 You said: '{text}' — I’m here to help onboard you.")
+    say(f"Hey <@{user}> 👋! I’m here to help onboard you.")
 
 
 app = FastAPI()

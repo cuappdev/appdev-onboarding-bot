@@ -28,6 +28,7 @@ pip install -r requirements.txt
 ```bash
 SLACK_BOT_TOKEN=xoxb-your-bot-token
 SLACK_SIGNING_SECRET=your-signing-secret
+GEMINI_API_KEY=your-gemini-api-key
 ```
 
 ## Run locally
