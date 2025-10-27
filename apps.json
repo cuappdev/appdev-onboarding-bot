@@ -1,26 +1,361 @@
 {
-  "resell": {
-    "name": "Resell",
+  "eatery": {
+    "name": "Eatery",
     "repos": {
-      "backend": "resell-backend",
-      "ios": "resell-ios",
-      "android": "resell-android"
+      "ios": "eatery-ios",
+      "android": "eatery-android",
+      "backend": "eatery-backend",
+      "blue-backend": "eatery-blue-backend",
+      "blue-ios": "eatery-blue-ios",
+      "blue-android": "eatery-blue-android",
+      "chef": "eatery-chef"
+    }
+  },
+  "podcast": {
+    "name": "Podcast",
+    "repos": {
+      "ios": "podcast-ios",
+      "backend": "podcast-backend"
+    }
+  },
+  "ithaca": {
+    "name": "Ithaca",
+    "repos": {
+      "transit-ios": "ithaca-transit-ios",
+      "transit-backend": "ithaca-transit-backend",
+      "transit-android": "ithaca-transit-android",
+      "transit-tcat-microservice": "ithaca-transit-tcat-microservice",
+      "transit-analytics": "ithaca-transit-analytics",
+      "transit-android-v2": "ithaca-transit-android-v2",
+      "transit-compose": "ithaca-transit-compose"
+    }
+  },
+  "big": {
+    "name": "Big",
+    "repos": {
+      "red-shuttle": "big-red-shuttle",
+      "red-bot": "big-red-bot"
+    }
+  },
+  "pollo": {
+    "name": "Pollo",
+    "repos": {
+      "ios": "pollo-ios",
+      "backend": "pollo-backend",
+      "web": "pollo-web",
+      "android": "pollo-android"
     }
   },
   "uplift": {
     "name": "Uplift",
     "repos": {
-      "android": "uplift-android",
       "ios": "uplift-ios",
-      "backend": "uplift-backend"
+      "backend": "uplift-backend",
+      "android": "uplift-android",
+      "ios-swiftui": "uplift-ios-swiftui"
     }
   },
-  "eatery": {
-    "name": "Eatery",
+  "campus": {
+    "name": "Campus",
     "repos": {
-      "android": "eatery-android",
-      "ios": "eatery-ios",
-      "backend": "eatery-backend"
+      "tour-ios": "campus-tour-ios"
+    }
+  },
+  "appdev": {
+    "name": "Appdev",
+    "repos": {
+      "template.js": "appdev-template.js",
+      "template.py": "appdev-template.py",
+      "ios-demo": "appdev-ios-demo",
+      "histogram": "appdev-histogram",
+      "website": "appdev-website",
+      "onboarding-bot": "appdev-onboarding-bot"
+    }
+  },
+  "swarm": {
+    "name": "Swarm",
+    "repos": {
+      "cli": "swarm-cli"
+    }
+  },
+  "ios": {
+    "name": "Ios",
+    "repos": {
+      "workshops": "ios-workshops",
+      "networking": "ios-networking",
+      "course-backend": "ios-course-backend"
+    }
+  },
+  "intro": {
+    "name": "Intro",
+    "repos": {
+      "to-ios-workshop": "intro-to-ios-workshop",
+      "to-backend-testing-scripts": "intro-to-backend-testing-scripts"
+    }
+  },
+  "acai": {
+    "name": "Acai",
+    "repos": {
+      "ios": "acai-ios",
+      "backend": "acai-backend"
+    }
+  },
+  "swipe": {
+    "name": "Swipe",
+    "repos": {
+      "analytics": "swipe-analytics"
+    }
+  },
+  "course": {
+    "name": "Course",
+    "repos": {
+      "grab": "course-grab",
+      "kahoot-backend": "course-kahoot-backend"
+    }
+  },
+  "push": {
+    "name": "Push",
+    "repos": {
+      "notifications-backend": "push-notifications-backend"
+    }
+  },
+  "devops": {
+    "name": "Devops",
+    "repos": {
+      "cli": "devops-cli"
+    }
+  },
+  "analytics": {
+    "name": "Analytics",
+    "repos": {
+      "ios": "analytics-ios"
+    }
+  },
+  "announcements": {
+    "name": "Announcements",
+    "repos": {
+      "ios-old": "announcements-ios-old",
+      "backend-old": "announcements-backend-old",
+      "ios": "announcements-ios",
+      "android": "announcements-android",
+      "backend": "announcements-backend",
+      "web": "announcements-web"
+    }
+  },
+  "coursegrab": {
+    "name": "Coursegrab",
+    "repos": {
+      "backend": "coursegrab-backend",
+      "ios": "coursegrab-ios",
+      "android": "coursegrab-android",
+      "web": "coursegrab-web"
+    }
+  },
+  "pear": {
+    "name": "Pear",
+    "repos": {
+      "ios": "pear-ios",
+      "backend": "pear-backend",
+      "android": "pear-android",
+      "django-backend": "pear-django-backend",
+      "algorithm": "pear-algorithm"
+    }
+  },
+  "chat": {
+    "name": "Chat",
+    "repos": {
+      "ios": "chat-ios",
+      "web": "chat-web"
+    }
+  },
+  "bagel": {
+    "name": "Bagel",
+    "repos": {
+      "bot": "bagel-bot"
+    }
+  },
+  "volume": {
+    "name": "Volume",
+    "repos": {
+      "ios": "volume-ios",
+      "backend": "volume-backend",
+      "android": "volume-android",
+      "microservice": "volume-microservice",
+      "compose-android": "volume-compose-android"
+    }
+  },
+  "fake": {
+    "name": "Fake",
+    "repos": {
+      "eatery": "fake-eatery"
+    }
+  },
+  "muffin": {
+    "name": "Muffin",
+    "repos": {
+      "bot": "muffin-bot"
+    }
+  },
+  "food": {
+    "name": "Food",
+    "repos": {
+      "ios": "food-ios",
+      "android": "food-android",
+      "backend": "food-backend"
+    }
+  },
+  "android": {
+    "name": "Android",
+    "repos": {
+      "ios-course-messageboard": "android-ios-course-messageboard",
+      "native-first-round": "android-native-first-round",
+      "native-final-round": "android-native-final-round"
+    }
+  },
+  "resell": {
+    "name": "Resell",
+    "repos": {
+      "backend": "resell-backend",
+      "react-native": "resell-react-native",
+      "android": "resell-android",
+      "ios": "resell-ios"
+    }
+  },
+  "kahoot": {
+    "name": "Kahoot",
+    "repos": {
+      "leaderboard-backend": "kahoot-leaderboard-backend"
+    }
+  },
+  "dev": {
+    "name": "Dev",
+    "repos": {
+      "class-website-template": "dev-class-website-template",
+      "class-fa21-website": "dev-class-fa21-website",
+      "class-sp22-website": "dev-class-sp22-website"
+    }
+  },
+  "newbies": {
+    "name": "Newbies",
+    "repos": {
+      "git-tutorial": "newbies-git-tutorial",
+      "git-tutorial-fa22": "newbies-git-tutorial-fa22",
+      "tutorial-sp23": "newbies-tutorial-sp23",
+      "tutorial-fa23": "newbies-tutorial-fa23"
+    }
+  },
+  "scoop": {
+    "name": "Scoop",
+    "repos": {
+      "ios": "scoop-ios",
+      "android": "scoop-android",
+      "backend": "scoop-backend"
+    }
+  },
+  "auto": {
+    "name": "Auto",
+    "repos": {
+      "recruitment": "auto-recruitment"
+    }
+  },
+  "url": {
+    "name": "Url",
+    "repos": {
+      "shortener": "url-shortener"
+    }
+  },
+  "internal": {
+    "name": "Internal",
+    "repos": {
+      "tools": "internal-tools"
+    }
+  },
+  "app": {
+    "name": "App",
+    "repos": {
+      "status": "app-status"
+    }
+  },
+  "newbie": {
+    "name": "Newbie",
+    "repos": {
+      "onboarding-sp24": "newbie-onboarding-sp24",
+      "onboarding-fa24": "newbie-onboarding-fa24",
+      "onboarding-sp25": "newbie-onboarding-sp25",
+      "onboarding-fa25": "newbie-onboarding-fa25"
+    }
+  },
+  "all": {
+    "name": "All",
+    "repos": {
+      "in-ios-swiftui": "all-in-ios-swiftui",
+      "in-backend": "all-in-backend",
+      "in-android": "all-in-android"
+    }
+  },
+  "score": {
+    "name": "Score",
+    "repos": {
+      "ios": "score-ios",
+      "backend": "score-backend",
+      "android": "score-android"
+    }
+  },
+  "react": {
+    "name": "React",
+    "repos": {
+      "native-appdev-announcements": "react-native-appdev-announcements"
+    }
+  },
+  "backend": {
+    "name": "Backend",
+    "repos": {
+      "final-round-fa24": "backend-final-round-fa24"
+    }
+  },
+  "cft": {
+    "name": "Cft",
+    "repos": {
+      "web-demo": "cft-web-demo",
+      "api-starter": "cft-api-starter"
+    }
+  },
+  "candid": {
+    "name": "Candid",
+    "repos": {
+      "ios": "candid-ios"
+    }
+  },
+  "ai": {
+    "name": "Ai",
+    "repos": {
+      "dev": "ai-dev"
+    }
+  },
+  "compose": {
+    "name": "Compose",
+    "repos": {
+      "first-round-starter": "compose-first-round-starter",
+      "final-round-starter": "compose-final-round-starter"
+    }
+  },
+  "dpd": {
+    "name": "Dpd",
+    "repos": {
+      "website": "dpd-website"
+    }
+  },
+  "hustle": {
+    "name": "Hustle",
+    "repos": {
+      "android": "hustle-android",
+      "backend": "hustle-backend"
+    }
+  },
+  "center": {
+    "name": "Center",
+    "repos": {
+      "ios": "center-ios"
     }
   }
 }
